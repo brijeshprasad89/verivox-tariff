@@ -59,3 +59,19 @@ describe('## Misc', () => {
 
   });
 });
+
+describe("# Tariff Controller", () => {
+  describe('GET /api/tariff?consumption=', () => {
+    it('should calculate tariff and return array of products', (done) => {
+      request(app)
+        .get(`/api/tariff?consumption=${850}`)
+        .expect(httpStatus.OK)
+        .then((res) => {
+          expect(res.body.length).to.equal(2);
+          expect(res.body[0].name).to.equal("Base Tariff");
+          done();
+        })
+        .catch(done);
+    });
+  })
+})

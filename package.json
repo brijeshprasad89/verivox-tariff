@@ -12,8 +12,8 @@
   },
   "scripts": {
     "start": "node src/index.js",
-    "lint": "esw *.js server config --color",
-    "test": "cross-env NODE_ENV=test ./node_modules/.bin/istanbul cover _mocha -- --ui bdd --reporter spec --colors src --recursive",
+    "lint": "esw *.js api config --color",
+    "test": "cross-env NODE_ENV=test ./node_modules/.bin/istanbul cover _mocha -- --ui bdd --reporter spec --colors src/api/**/*.js --recursive",
     "test:check-coverage": "yarn test:coverage && istanbul check-coverage"
   },
   "repository": {
