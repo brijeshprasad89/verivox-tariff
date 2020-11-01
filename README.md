@@ -7,7 +7,10 @@
 3. yarn test -- To run the test
 
 ## API Documentation
-`/api/tariff?consumption=` </br>
+
+1. `/api/health-check` - returns `OK` if service is up </br>
+    
+2. `/api/tariff?consumption=` </br>
 
 Accepts - Consumption (kWh/year) </br>
 Returns - List of Products in ascending order of their annual costs
